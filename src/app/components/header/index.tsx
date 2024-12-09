@@ -10,7 +10,7 @@ import {
 
 export function Header() {
   return (
-    <header className="bg-background text-white py-4 px-6 flex justify-between items-center">
+    <header className="bg-background text-white p-4 flex justify-between items-center">
       <div className="text-xl font-bold flex items-center space-x-4">
         <Image src={"/logo.svg"} alt={"logo"} width={40} height={40} />
         <Link href="/" className="hover:text-gray-400 transition-colors">
