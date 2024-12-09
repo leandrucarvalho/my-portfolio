@@ -31,7 +31,7 @@ export function Header() {
           <span className="text-primary">#</span>contacts
         </Link>
         <Select>
-          <SelectTrigger className="w-[70px]">
+          <SelectTrigger className="w-[90px]">
             <SelectValue placeholder="Idioma" />
           </SelectTrigger>
           <SelectContent>
