@@ -3,8 +3,8 @@ import Image from "next/image";
 export function Hero() {
   return (
     <>
-      <div className="flex flex-col items-center justify-center w-full relative">
-        <div className="flex items-center p-4 gap-4 mt-16 justify-evenly">
+      <div className="flex flex-col items-center relative">
+        <div className="flex items-center gap-4 mt-16 justify-evenly">
           <div className="flex flex-col text-left text-white max-w-[60%]">
             <h1 className="text-4xl font-semibold">
               Leandro Carvalho é um desenvolvedor <br />{" "}
