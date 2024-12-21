@@ -1,3 +1,4 @@
+import { AboutMe } from "./_components/about-me/about-me";
 import { Header } from "./_components/header";
 import { Hero } from "./_components/hero";
 import { Projects } from "./_components/projects";
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <Projects />
       <Skills />
+      <AboutMe />
     </div>
   );
 }
