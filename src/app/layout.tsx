@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+const firaSans = localFont({
+  src: "./fonts/FiraCode-Medium.ttf",
+  variable: "--font-fira-sans",
   weight: "100 900",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+const firaMono = localFont({
+  src: "./fonts/FiraCode-Medium.ttf",
+  variable: "--font-fira-mono",
   weight: "100 900",
 });
 
@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${firaSans.variable} ${firaMono.variable} antialiased mx-24 items-center flex justify-center`}
       >
         {children}
       </body>
