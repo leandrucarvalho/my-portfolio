@@ -4,7 +4,7 @@ import { ContainerSkills } from "./container-skils";
 
 export function Skills() {
   return (
-    <div className="mt-28 flex gap-10 h-96">
+    <div className="mt-28 h-96 flex flex-row lg:mx-20 justify-between">
       <div>
         <div className="flex items-center justify-between">
           <div className="flex items-center">
@@ -40,7 +40,7 @@ export function Skills() {
           <div className="absolute -bottom-56 -right-9 border w-16 h-16"></div>
         </div>
       </div>
-      <div className="grid grid-cols-3 grid-rows-2 gap-2 mt-24">
+      <div className="grid grid-cols-3 grid-rows-2 gap-2 mt-24 lg:w-1/3">
         <div className="col-start-1 row-start-1 col-end-2 row-end-2">
           <ContainerSkills
             text="Typescript, Javascript, Python"

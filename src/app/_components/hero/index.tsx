@@ -3,7 +3,7 @@ import Image from "next/image";
 export function Hero() {
   return (
     <>
-      <div className="flex flex-col items-center relative">
+      <div className="flex flex-col items-center relative mb-40">
         <div className="flex items-center gap-4 mt-16 justify-evenly">
           <div className="flex flex-col text-left text-white max-w-[60%]">
             <h1 className="text-4xl font-semibold">
@@ -62,7 +62,7 @@ export function Hero() {
           <span className="absolute -bottom-[10px] right-4 bg-background px-1">
             <Image src={"/aspas.svg"} alt={""} width={25} height={20} />
           </span>
-          <span className="border-b border-x p-4 absolute -bottom-[52px] right-0 text-sm w-32">
+          <span className="border-b border-x p-4 absolute -bottom-[72px] right-0 text-sm w-32">
             - Steve Jobs
           </span>
         </div>

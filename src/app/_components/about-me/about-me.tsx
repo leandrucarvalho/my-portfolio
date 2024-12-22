@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function AboutMe() {
   return (
-    <div className="mb-28 flex items-center justify-between">
+    <div className="mb-28 flex items-center justify-between lg:mx-20">
       <div>
         <div className="w-[511px]">
           <div className="flex items-center justify-between">

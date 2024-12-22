@@ -3,17 +3,17 @@ import { ContainerProject } from "./container-project";
 
 export function Projects() {
   return (
-    <div className="mt-20 relative flex flex-col w-fit">
-      <div className="flex items-center justify-between">
+    <div className="mt-20 relative flex flex-col items-center">
+      <div className="flex items-center border ">
         <div className="flex items-center">
           <h1 className="font-medium text-4xl flex pr-4">
             <span className="text-primary">#</span> projects
           </h1>
           <Separator className="bg-primary w-[511px]" />
         </div>
-        <button>View all ~~{">"} </button>
+        <button className="pl-4">View all ~~{">"} </button>
       </div>
-      <div className="flex flex-row gap-4">
+      <div className="flex flex-row gap-4 lg:gap-x-36 ">
         <ContainerProject />
         <ContainerProject />
         <ContainerProject />

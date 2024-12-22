@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Footer } from "./_components/footer/footer";
 
 const firaSans = localFont({
   src: "./fonts/FiraCode-Medium.ttf",
@@ -26,9 +27,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${firaSans.variable} ${firaMono.variable} antialiased mx-24 items-center flex justify-center`}
+        className={`${firaSans.variable} ${firaMono.variable} antialiased flex  flex-col justify-between`}
       >
         {children}
+        <Footer />
       </body>
     </html>
   );

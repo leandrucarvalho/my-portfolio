@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function Contacts() {
   return (
-    <div className="mb-28 flex  justify-between h-60 relative">
+    <div className="mb-28 flex  justify-between h-60 relative lg:mx-20">
       <div>
         <div className="w-[511px]">
           <div className="flex items-center justify-between">
