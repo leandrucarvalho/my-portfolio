@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -7,8 +10,24 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { DropdownMenuCustom } from "./menu";
 
 export function Header() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 767);
+    };
+
+    handleResize(); // Verifica o tamanho da tela na montagem
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <header className="bg-background text-white p-4 flex justify-between items-center">
       <div className="text-xl font-bold flex items-center space-x-4">
@@ -17,29 +36,33 @@ export function Header() {
           Leandro Carvalho
         </Link>
       </div>
-      <nav className="space-x-4 text-textGray flex items-baseline">
-        <Link href="/" className="hover:text-white transition-colors">
-          <span className="text-primary">#</span>home
-        </Link>
-        <Link href="#works" className="hover:text-white transition-colors">
-          <span className="text-primary">#</span>works
-        </Link>
-        <Link href="#about-me" className="hover:text-white transition-colors">
-          <span className="text-primary">#</span>about-me
-        </Link>
-        <Link href="#contacts" className="hover:text-white transition-colors">
-          <span className="text-primary">#</span>contacts
-        </Link>
-        <Select>
-          <SelectTrigger className="w-[90px]">
-            <SelectValue placeholder="Idioma" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="light">EN</SelectItem>
-            <SelectItem value="dark">PT-BR</SelectItem>
-          </SelectContent>
-        </Select>
-      </nav>
+      {isMobile ? (
+        <DropdownMenuCustom />
+      ) : (
+        <nav className="space-x-4 text-textGray flex items-baseline">
+          <Link href="/" className="hover:text-white transition-colors">
+            <span className="text-primary">#</span>home
+          </Link>
+          <Link href="#works" className="hover:text-white transition-colors">
+            <span className="text-primary">#</span>works
+          </Link>
+          <Link href="#about-me" className="hover:text-white transition-colors">
+            <span className="text-primary">#</span>about-me
+          </Link>
+          <Link href="#contacts" className="hover:text-white transition-colors">
+            <span className="text-primary">#</span>contacts
+          </Link>
+          <Select>
+            <SelectTrigger className="w-[90px]">
+              <SelectValue placeholder="Idioma" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="light">EN</SelectItem>
+              <SelectItem value="dark">PT-BR</SelectItem>
+            </SelectContent>
+          </Select>
+        </nav>
+      )}
     </header>
   );
 }

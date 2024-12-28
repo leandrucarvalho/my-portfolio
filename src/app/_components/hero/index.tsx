@@ -3,10 +3,10 @@ import Image from "next/image";
 export function Hero() {
   return (
     <>
-      <div className="flex flex-col items-center relative mb-40">
-        <div className="flex items-center gap-4 mt-16 justify-evenly">
-          <div className="flex flex-col text-left text-white max-w-[60%]">
-            <h1 className="text-4xl font-semibold">
+      <div className="flex flex-col items-center relative mb-40 gap-y-16 p-4">
+        <div className="flex items-center mt-16 justify-evenly">
+          <div className="flex flex-col text-left text-white">
+            <h1 className="text-xl font-semibold">
               Leandro Carvalho é um desenvolvedor <br />{" "}
               <span className="text-primary">full-stack</span> e{" "}
               <span className="text-primary">analista de sistemas</span>
@@ -15,43 +15,42 @@ export function Hero() {
               A melhor solução para o seu negócio, ele cria aplicativos web
               reativos onde as tecnologias se encontram com a criatividade
             </p>
-            <button className="mt-6 px-4 py-2 border text-white border-primary w-fit">
+            <button className="mt-6 px-4 py-2 border text-white border-primary w-fit text-sm">
               Entre em contato !!
             </button>
           </div>
-
-          <div className="flex flex-col items-center justify-center">
-            <div className="relative">
-              <Image
-                src="/logo2.svg"
-                alt="hero"
-                width={155}
-                height={155}
-                className="absolute top-20 -left-3"
-              />
-              <Image
-                src="/person.png"
-                alt="hero"
-                width={450}
-                height={450}
-                className="relative z-0"
-              />
-              <Image
-                src={"/dots.png"}
-                alt="hero"
-                className="absolute bottom-20 right-6 z-20"
-                width={84}
-                height={84}
-              />
-            </div>
-            <div className="mt-4 text-white border p-2 w-full">
-              <span className="border border-none px-2 bg-primary mr-2"></span>{" "}
-              Atualmente trabalhando como{" "}
-              <span className="text-primary font-bold">Front End React</span>
-            </div>
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <div className="relative">
+            <Image
+              src="/logo2.svg"
+              alt="hero"
+              width={100}
+              height={100}
+              className="absolute top-16 left-3"
+            />
+            <Image
+              src="/person.png"
+              alt="hero"
+              width={300}
+              height={300}
+              className="relative z-0"
+            />
+            <Image
+              src={"/dots.png"}
+              alt="hero"
+              className="absolute bottom-20 right-6"
+              width={60}
+              height={60}
+            />
+          </div>
+          <div className="mt-4 text-white border p-2 w-full">
+            <span className="border border-none px-2 bg-primary mr-2"></span>{" "}
+            Atualmente trabalhando como{" "}
+            <span className="text-primary font-bold">Front End React</span>
           </div>
         </div>
-        <div className="text-center mt-16 text-white flex flex-col relative items-center justify-center w-fit">
+        <div className="text-center text-white flex flex-col relative items-center justify-center">
           <span className="absolute -top-[10px] left-4 bg-background px-1">
             <Image src={"/aspas.svg"} alt={""} width={25} height={20} />
           </span>
@@ -66,7 +65,6 @@ export function Hero() {
             - Steve Jobs
           </span>
         </div>
-        <div className="absolute -bottom-2 -right-3 border w-24 h-24 "></div>
       </div>
     </>
   );

@@ -3,22 +3,23 @@ import { ContainerProject } from "./container-project";
 
 export function Projects() {
   return (
-    <div className="mt-20 relative flex flex-col items-center">
-      <div className="flex items-center border ">
-        <div className="flex items-center">
-          <h1 className="font-medium text-4xl flex pr-4">
+    <div className="flex flex-col p-4" id="projects">
+      <div className="flex justify-between ">
+        <div className="flex items-center gap-x-3">
+          <h1 className="font-medium text-xl flex">
             <span className="text-primary">#</span> projects
           </h1>
-          <Separator className="bg-primary w-[511px]" />
+          <Separator className="bg-primary w-36" />
         </div>
-        <button className="pl-4">View all ~~{">"} </button>
+        <div className="flex">
+          <button>View all ~~{">"} </button>
+        </div>
       </div>
-      <div className="flex flex-row gap-4 lg:gap-x-36 ">
+      <div className="flex flex-col items-center mt-10 gap-y-8">
         <ContainerProject />
         <ContainerProject />
         <ContainerProject />
       </div>
-      <div className="absolute bottom-16 -right-52 border w-24 h-24 "></div>
     </div>
   );
 }

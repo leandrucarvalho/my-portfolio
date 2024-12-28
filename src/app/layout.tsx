@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Footer } from "./_components/footer/footer";
+import { Header } from "./_components/header";
 
 const firaSans = localFont({
   src: "./fonts/FiraCode-Medium.ttf",
@@ -25,10 +26,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body
-        className={`${firaSans.variable} ${firaMono.variable} antialiased flex  flex-col justify-between`}
+        className={`${firaSans.variable} ${firaMono.variable} antialiased flex flex-col min-h-screen`}
       >
+        <Header />
         {children}
         <Footer />
       </body>
