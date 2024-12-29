@@ -3,51 +3,52 @@ import Image from "next/image";
 export function Hero() {
   return (
     <>
-      <div className="flex flex-col items-center relative mb-40 gap-y-16 p-4">
+      <div className="flex flex-col items-center relative mb-40 gap-y-16 p-4 md:mx-10">
         <div className="flex items-center mt-16 justify-evenly">
-          <div className="flex flex-col text-left text-white">
-            <h1 className="text-xl font-semibold">
-              Leandro Carvalho é um desenvolvedor <br />{" "}
-              <span className="text-primary">full-stack</span> e{" "}
-              <span className="text-primary">analista de sistemas</span>
-            </h1>
-            <p className="mt-4 text-base">
-              A melhor solução para o seu negócio, ele cria aplicativos web
-              reativos onde as tecnologias se encontram com a criatividade
-            </p>
-            <button className="mt-6 px-4 py-2 border text-white border-primary w-fit text-sm">
-              Entre em contato !!
-            </button>
-          </div>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <div className="relative">
-            <Image
-              src="/logo2.svg"
-              alt="hero"
-              width={100}
-              height={100}
-              className="absolute top-16 left-3"
-            />
-            <Image
-              src="/person.png"
-              alt="hero"
-              width={300}
-              height={300}
-              className="relative z-0"
-            />
-            <Image
-              src={"/dots.png"}
-              alt="hero"
-              className="absolute bottom-20 right-6"
-              width={60}
-              height={60}
-            />
-          </div>
-          <div className="mt-4 text-white border p-2 w-full">
-            <span className="border border-none px-2 bg-primary mr-2"></span>{" "}
-            Atualmente trabalhando como{" "}
-            <span className="text-primary font-bold">Front End React</span>
+          <div className="flex flex-col text-left text-white  md:flex-row md:items-center md:justify-between">
+            <div className=" md:w-1/2 md:mr-8">
+              <h1 className="text-xl font-semibold md:text-4xl">
+                Leandro Carvalho é um desenvolvedor{" "}
+                <span className="text-primary">full-stack</span>
+              </h1>
+              <p className="mt-4 text-base">
+                A melhor solução para o seu negócio, ele cria aplicativos web
+                reativos onde as tecnologias se encontram com a criatividade
+              </p>
+              <button className="mt-6 px-4 py-2 border text-white border-primary w-fit text-sm md:text-base">
+                Entre em contato !!
+              </button>
+            </div>
+            <div className="flex flex-col items-center justify-center mt-8">
+              <div className="relative">
+                <Image
+                  src="/logo2.svg"
+                  alt="hero"
+                  width={100}
+                  height={100}
+                  className="absolute top-16 left-3 md:w-52"
+                />
+                <Image
+                  src="/person.png"
+                  alt="hero"
+                  width={300}
+                  height={300}
+                  className="relative z-0 md:w-[500px]"
+                />
+                <Image
+                  src={"/dots.png"}
+                  alt="hero"
+                  className="absolute bottom-20 right-6 md:w-32"
+                  width={60}
+                  height={60}
+                />
+              </div>
+              <div className="mt-4 text-white border p-2 w-full">
+                <span className="border border-none px-2 bg-primary mr-2"></span>{" "}
+                Atualmente trabalhando como{" "}
+                <span className="text-primary font-bold">Front End React</span>
+              </div>
+            </div>
           </div>
         </div>
         <div className="text-center text-white flex flex-col relative items-center justify-center">
