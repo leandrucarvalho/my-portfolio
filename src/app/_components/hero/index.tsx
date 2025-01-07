@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 
 export function Hero() {
@@ -15,7 +16,13 @@ export function Hero() {
                 A melhor solução para o seu negócio, ele cria aplicativos web
                 reativos onde as tecnologias se encontram com a criatividade
               </p>
-              <button className="mt-6 px-4 py-2 border text-white border-primary w-fit text-sm md:text-base">
+              <button
+                onClick={() => {
+                  window.location.href =
+                    "https://www.linkedin.com/in/leandro-c-s/";
+                }}
+                className="mt-6 px-4 py-2 border text-white border-primary w-fit text-sm md:text-base"
+              >
                 Entre em contato !!
               </button>
             </div>

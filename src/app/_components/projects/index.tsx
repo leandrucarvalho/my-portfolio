@@ -13,7 +13,14 @@ export function Projects() {
           <Separator className="bg-primary w-36 md:w-80" />
         </div>
         <div className="flex">
-          <button>View all ~~{">"} </button>
+          <button
+            onClick={() =>
+              (window.location.href =
+                "https://github.com/leandrucarvalho?tab=repositories")
+            }
+          >
+            Ver todos ~~{">"}{" "}
+          </button>
         </div>
       </div>
       <div className="flex flex-col items-center mt-20 gap-y-9 gap-x-5 md:flex-row md:justify-evenly sm:flex-col">

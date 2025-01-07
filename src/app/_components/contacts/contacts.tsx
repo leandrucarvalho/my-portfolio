@@ -25,7 +25,7 @@ export function Contacts() {
         </div>
       </div>
       <div className="flex flex-col gap-y-4 p-4 border mt-4 md:w-80">
-        <h1>Message me here</h1>
+        <h1>Entre em contato comigo!</h1>
         <div className="items-center flex gap-x-2">
           <Image
             src="/discord.svg"
