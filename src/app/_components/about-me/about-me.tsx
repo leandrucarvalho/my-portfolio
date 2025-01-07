@@ -29,10 +29,6 @@ export function AboutMe() {
               as tecnologias e frameworks mais recentes.
             </p>
           </article>
-
-          <button className="border border-primary px-4 py-2 mt-7 text-sm">
-            Read more -&gt;
-          </button>
         </div>
       </div>
       <div className="flex flex-col items-center relative mt-6">
