@@ -3,7 +3,10 @@ import Image from "next/image";
 
 export function Contacts() {
   return (
-    <div className="my-28 flex flex-col p-4 md:mx-10 md:flex-row" id="contacts">
+    <div
+      className="my-28 flex flex-col p-4 md:mx-10 md:flex-row lg:justify-between"
+      id="contacts"
+    >
       <div className="">
         <div className="flex items-center gap-x-6">
           <h1 className="text-xl flex md:text-4xl">
