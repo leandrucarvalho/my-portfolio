@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Footer } from "./_components/footer/footer";
 import { Header } from "./_components/header";
+import { Analytics } from "@vercel/analytics/next";
 
 const firaSans = localFont({
   src: "./fonts/FiraCode-Medium.ttf",
@@ -32,6 +33,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <Analytics />
         <Footer />
       </body>
     </html>
