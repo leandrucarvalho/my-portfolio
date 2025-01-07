@@ -5,7 +5,7 @@ import { ContainerSkills } from "./container-skils";
 export function Skills() {
   return (
     <div
-      className="flex flex-col gap-y-64 md:flex-row md:justify-between md:mx-10  md:my-36 md:h-96"
+      className="flex flex-col mx-4 gap-y-64 md:flex-row md:justify-between md:mx-10  md:my-36 md:h-96"
       id="skills"
     >
       <div>
